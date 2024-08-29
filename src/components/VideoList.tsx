@@ -1,4 +1,4 @@
-import { FC, useEffect } from "react"
+import { FC } from "react"
 import Video from "./Video"
 
 type Props = {
@@ -6,12 +6,7 @@ type Props = {
 }
 
 const VideoList: FC<Props> = ({videos}) => {
-    
-    // useEffect(() => {
-    //   const v = videos
-    //   debugger
-    // }, [])
-    
+        
     return <div className='menu-content'>
         <div className='allvideos'>
         {

@@ -1,9 +1,9 @@
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import { VideoContext } from "../Context"
 
 const Sidebar = () => {
 
-    const {setActiveCategory} = useContext(VideoContext)
+    const {activeCategory, setActiveCategory} = useContext(VideoContext)
 
     const categories = ["Музыка", "Спорт", "Блоги", "Образование", "Новости", "Обзоры", "Все"]
     const icons = [
@@ -28,8 +28,8 @@ const Sidebar = () => {
     return <>
         <div className="menu">
             <aside>
-                {categories.map((category) =>
-                    <button onClick={() => changeActiveCategory(category)}>
+                {categories.map((category, id) =>
+                    <button key={id} className={activeCategory === categories[id] ? 'active' : ''} onClick={() => changeActiveCategory(category)}>
                         <div className='icon'>{icons[categories.indexOf(category)]}</div>
                         <div className='name'>{category}</div>
                     </button>)}

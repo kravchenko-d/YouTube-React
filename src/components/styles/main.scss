@@ -36,7 +36,7 @@ body {
                     > svg {
                         position: absolute;
                         right: 65px;
-                        bottom: 20px;
+                        top: 30px;
                     }
                 }
             }
@@ -66,6 +66,9 @@ body {
                     &:hover {
                         background-color: rgba(194, 194, 194, 0.4);
                         cursor: pointer;
+                    }
+                    &.active {
+                        background-color: rgba(194, 194, 194, 0.4);
                     }
                     > .icon {
                         width: 32px;

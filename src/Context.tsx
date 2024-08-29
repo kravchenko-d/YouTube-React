@@ -1,4 +1,4 @@
-import { Children, PropsWithChildren, createContext, useEffect, useState } from "react";
+import { PropsWithChildren, createContext, useState } from "react";
 
 export const VideoContext = createContext<any>({})
 
