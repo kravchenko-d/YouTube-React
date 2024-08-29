@@ -283,14 +283,7 @@ function Context({children}: PropsWithChildren) {
 
     const [activeCategory, setActiveCategory] = useState<string>('Все')
 
-    // setVideos(videos1)
-
-    // useEffect(() => {
-    //     const v = videos
-    //     debugger
-    // }, [])
-
-    return <VideoContext.Provider value={{videos, activeCategory, setActiveCategory}}>
+    return <VideoContext.Provider value={{videos, setVideos, activeCategory, setActiveCategory}}>
         {children}
     </VideoContext.Provider>
 

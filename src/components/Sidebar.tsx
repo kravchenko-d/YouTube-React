@@ -17,11 +17,6 @@ const Sidebar = () => {
     ]
 
     const changeActiveCategory = (item: string) => {
-
-        let activeItem: string = ''
-
-        activeItem = item
-
         setActiveCategory(item)
     }
 

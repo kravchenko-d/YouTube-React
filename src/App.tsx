@@ -1,17 +1,13 @@
 import './components/styles/main.scss'
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
-import { Children, useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Video, VideoContext } from './Context'
 import VideoList from './components/VideoList'
 
 function App() {
 
 const {videos, activeCategory} = useContext(VideoContext)
-
-  // useEffect(() => {
-  //   const v = videos
-  // }, [])
 
   const [filteredVideos, setFilteredVideos] = useState<Video[]>([])
 

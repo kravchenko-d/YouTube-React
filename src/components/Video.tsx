@@ -12,7 +12,7 @@ type Props = {
     category: string
 }
 
-const Video: FC<Props> = ({id, preview, title, channel, length, link, views, date, channel_icon, category}) => {
+const Video: FC<Props> = ({preview, title, channel, length, link, views, date, channel_icon}) => {
     return <div className='video'>
         <a href={link}>
             <div>
