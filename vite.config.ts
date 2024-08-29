@@ -5,6 +5,9 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: '/opt/build/repo/build'
-  }
+    // outDir: '/opt/build/repo/build', // для Netlify
+    outDir: 'build/',
+    emptyOutDir: true,
+  },
+  base: 'https://kravchenko-d.github.io/YouTube-React/'
 })

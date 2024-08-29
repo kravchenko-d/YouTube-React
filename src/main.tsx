@@ -1,13 +1,13 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import VideoContext from './Context'
+import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('app')!).render(
-  <React.StrictMode>
+  <BrowserRouter basename='/YouTube-React'>
     <VideoContext>
       <App />      
     </VideoContext>
-
-  </React.StrictMode>,
+  </BrowserRouter>
+  ,
 )

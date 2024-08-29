@@ -257,22 +257,13 @@ export type VideoContext = {
         category: categories[id]
     }))
 
-    function shuffle(array: Video []) {
-        let currentIndex = array.length,  randomIndex
-      
-        // While there remain elements to shuffle.
-        while (currentIndex > 0) {
-      
-          // Pick a remaining element.
-          randomIndex = Math.floor(Math.random() * currentIndex)
-          currentIndex--
-      
-          // And swap it with the current element.
-          [array[currentIndex], array[randomIndex]] = [
-            array[randomIndex], array[currentIndex]]
-        }
-      
-        return array
+    function shuffle(arr: Video []) {
+
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+          }
+          return arr;
       }
 
       shuffle(videos1)
